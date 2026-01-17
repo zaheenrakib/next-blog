@@ -293,7 +293,7 @@ const Navbar = () => {
                   >
                     <Link
                       href="/dashboard"
-                      className={`block w-full text-center px-3 py-2 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700`}
+                      className={`block w-full text-center px-3 py-2 rounded-lg font-semibold transition-all duration-300 bg-linear-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700`}
                     >
                       Write
                     </Link>

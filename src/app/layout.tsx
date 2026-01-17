@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/common/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next Blog",
-  description: "",
+  title: "NextBlog - Share Your Stories",
+  description:
+    "Discover inspiring articles, expert insights, and creative stories on NextBlog. Join our community of writers and readers exploring ideas that matter.",
+  keywords: "blog, articles, writing, stories, tech, lifestyle",
+  authors: [{ name: "NextBlog Team" }],
+  openGraph: {
+    title: "NextBlog - Share Your Stories",
+    description:
+      "Discover inspiring articles, expert insights, and creative stories",
+    url: "https://nextblog.com",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,10 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

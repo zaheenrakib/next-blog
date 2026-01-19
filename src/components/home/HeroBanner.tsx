@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, easeOut, easeInOut } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
 
 interface HeroBannerProps {
@@ -35,7 +35,7 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   };
@@ -47,7 +47,7 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   };
@@ -58,7 +58,7 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: easeInOut,
       },
     },
   };
@@ -81,8 +81,8 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
         <div
           className={`absolute inset-0 ${
             isDarkMode
-              ? "bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
-              : "bg-gradient-to-br from-white via-blue-50 to-white"
+              ? "bg-linear-to-br from-gray-900 via-blue-900 to-gray-900"
+              : "bg-linear-to-br from-white via-blue-50 to-white"
           }`}
         />
 
@@ -90,8 +90,8 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
         <motion.div
           className={`absolute top-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20 ${
             isDarkMode
-              ? "bg-gradient-to-r from-blue-500 to-purple-500"
-              : "bg-gradient-to-r from-blue-300 to-purple-300"
+              ? "bg-linear-to-r from-blue-500 to-purple-500"
+              : "bg-linear-to-r from-blue-300 to-purple-300"
           }`}
           animate={{
             x: [0, 30, -30, 0],
@@ -107,8 +107,8 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
         <motion.div
           className={`absolute bottom-0 left-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20 ${
             isDarkMode
-              ? "bg-gradient-to-r from-purple-500 to-blue-500"
-              : "bg-gradient-to-r from-purple-300 to-blue-300"
+              ? "bg-linear-to-r from-purple-500 to-blue-500"
+              : "bg-linear-to-r from-purple-300 to-blue-300"
           }`}
           animate={{
             x: [0, -30, 30, 0],
@@ -165,14 +165,14 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
             >
               Share Your{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="relative z-10 bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   Stories
                 </span>
                 <motion.span
                   className={`absolute inset-0 rounded-lg blur-lg opacity-50 ${
                     isDarkMode
-                      ? "bg-gradient-to-r from-blue-500 to-purple-500"
-                      : "bg-gradient-to-r from-blue-400 to-purple-400"
+                      ? "bg-linear-to-r from-blue-500 to-purple-500"
+                      : "bg-linear-to-r from-blue-400 to-purple-400"
                   }`}
                   animate={{
                     opacity: [0.3, 0.6, 0.3],
@@ -211,8 +211,8 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
                   href="/blog"
                   className={`group relative inline-flex items-center justify-center px-8 py-4 font-semibold rounded-lg transition-all duration-300 overflow-hidden ${
                     isDarkMode
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50"
-                      : "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50"
+                      ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50"
+                      : "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50"
                   }`}
                   aria-label="Read Blog Articles"
                 >
@@ -322,8 +322,8 @@ const HeroBanner = ({ isDarkMode = false }: HeroBannerProps) => {
               <div
                 className={`absolute inset-0 rounded-full blur-2xl opacity-30 ${
                   isDarkMode
-                    ? "bg-gradient-to-r from-blue-500 to-purple-500"
-                    : "bg-gradient-to-r from-blue-300 to-purple-300"
+                    ? "bg-linear-to-r from-blue-500 to-purple-500"
+                    : "bg-linear-to-r from-blue-300 to-purple-300"
                 }`}
               />
 

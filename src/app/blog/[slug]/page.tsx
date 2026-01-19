@@ -1,6 +1,6 @@
 "use client";
 import { useSelector } from "react-redux";
-import type { RootState } from "@/lib/store/store";
+import type { RootState } from "@/redux/store";
 import Link from "next/link";
 
 export default function Blog_Slug({ params }: { params: { slug: string } }) {

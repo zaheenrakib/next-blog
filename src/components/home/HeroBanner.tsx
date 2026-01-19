@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, easeOut, easeInOut } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
 

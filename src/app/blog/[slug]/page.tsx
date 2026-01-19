@@ -2,10 +2,12 @@
 import { useSelector } from "react-redux";
 import type { RootState } from "@/redux/store";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
-export default function Blog_Slug({ params }: { params: { slug: string } }) {
+export default function Blog_Slug() {
+  const { slug } = useParams() as { slug: string };
   const items = useSelector((s: RootState) => s.blog.items);
-  const post = items.find((p) => p.slug === params.slug);
+  const post = items.find((p) => p.slug === slug);
 
   if (!post) {
     return (

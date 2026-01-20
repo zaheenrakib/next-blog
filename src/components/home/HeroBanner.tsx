@@ -59,7 +59,7 @@ const HeroBanner = ({ isDarkMode = false }: { isDarkMode?: boolean }) => {
               isDarkMode ? "text-white" : "text-gray-900"
             }`}>
               Where Ideas <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500">
                 Find Their Voice.
               </span>
             </h1>
@@ -112,14 +112,14 @@ const HeroBanner = ({ isDarkMode = false }: { isDarkMode?: boolean }) => {
           {/* Right: Visual Experience */}
           <div className="relative lg:block hidden">
             <motion.div style={{ y: y1 }} className="relative z-10">
-              <div className="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800">
+              <div className="relative w-full aspect-4/5 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800">
                 <Image 
                   src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop"
                   alt="Modern workspace"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
                   <p className="text-blue-400 font-bold text-sm mb-2">Editor's Choice</p>
                   <h3 className="text-2xl font-bold leading-tight">Mastering Next.js 15 for Enterprise Applications</h3>
@@ -135,7 +135,7 @@ const HeroBanner = ({ isDarkMode = false }: { isDarkMode?: boolean }) => {
               }`}
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-orange-400 to-red-500 flex items-center justify-center text-white shadow-lg">
+                <div className="w-12 h-12 rounded-2xl bg-linear-to-tr from-orange-400 to-red-500 flex items-center justify-center text-white shadow-lg">
                   <TrendingUp size={24} />
                 </div>
                 <div>

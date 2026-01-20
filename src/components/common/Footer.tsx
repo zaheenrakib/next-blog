@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Newsletter Section - The "Action Card" */}
-        <div className="relative mb-16 overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-blue-600 to-purple-700 px-8 py-12 text-center shadow-2xl shadow-blue-500/20">
+        <div className="relative mb-16 overflow-hidden rounded-[2.5rem] bg-linear-to-r from-blue-600 to-purple-700 px-8 py-12 text-center shadow-2xl shadow-blue-500/20">
           <div className="relative z-10 max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
               Don't miss a single story.
@@ -47,7 +47,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow rounded-2xl border-none px-6 py-4 text-gray-900 focus:ring-2 focus:ring-purple-400 outline-none transition-all"
+                className="grow rounded-2xl border-none px-6 py-4 text-gray-900 focus:ring-2 focus:ring-purple-400 outline-none transition-all"
                 required
               />
               <button
@@ -68,7 +68,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 lg:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 bg-linear-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                 <Edit3 className="text-white" size={22} />
               </div>
               <span className="text-2xl font-bold dark:text-white">NextBlog</span>

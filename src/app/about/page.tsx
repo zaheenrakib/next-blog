@@ -51,7 +51,7 @@ const AboutPage = () => {
                 href="/blogs"
                 className="px-8 py-3 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 text-gray-800 dark:text-gray-200 font-semibold transition-all shadow-sm hover:shadow-md"
               >
-                Read Blogs
+                Read More Blogs
               </Link>
             </div>
           </motion.div>
